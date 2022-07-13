@@ -28,9 +28,9 @@ nav > span > a:hover { background: #ff00ff; color: white; }
 #stu-pic { width: 6em; height: 8em; float: left; }
 
 /* minfo.html 적용 스타일 */
-#year-table { table-layout: auto; width: 80%; border-collapse: seperate; }
+#year-table { table-layout: auto; width: 30%; border-collapse: seperate; }
 #year-table thead { background: #E4F2D0; }
-#logo { position: fixed; top:130px; left: 70px; opacity: 0.3; } 
+#logo { position: fixed; top:130px; left: 70px; opacity: 0.1; } 
 
 /* mstudy.html 적용 스타일 */
 video { margin: 5px; width: 300px; height: 200px; }
@@ -43,7 +43,58 @@ video { margin: 5px; width: 300px; height: 200px; }
 #pic2:hover { -webkit-transform: translate(100px,50px) scale(7,7) ; transform: scale(0.5); }
 #pic3:hover { -webkit-transform: translate(30px,50px) scale(7,7); transform: scale(0.5); }
 
-.ga :hover{
-	height:130%;
-	width: 130%;
+.h img {
+	transition: all 0.2s linear;
 }
+.h:hover img{
+	height:120%;
+	width:120%;
+}
+
+
+/*번역기*/
+#google_translate_element > div > div {
+	position: relative;
+	min-width: 200px;
+	height: 60px;
+}
+#google_translate_element > div > div > select::-ms-expand {
+    display: none;
+}
+
+#google_translate_element > div > div:after {
+    content: '<>'; /* 목록 펼침 아이콘 */
+    font: 17px "Consolas", monospace;
+    color: #333;
+    transform: rotate(90deg);
+    right: 11px;
+    top: 18px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #999;
+    position: absolute;
+    pointer-events: none;
+}
+
+#google_translate_element > div > div > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    float: right;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    border: 1px solid #cccccc;
+    -ms-word-break: normal;
+    word-break: normal;
+    border-radius: 10px;
+}
+
+/*intro에서 번역기, 학교홈페이지링크
+info에서 번역기 콤보박스 개수제한 includedLanguages : 'en,ja,es'사용
+mstudy사진을 css에서 마우스오버로 확대*/
